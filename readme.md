@@ -1,48 +1,14 @@
-# U-KNOW: La plataforma de aprendizaje cooperativo. Paso 3 Diseño y Desarrollo del UI
+![](https://imgur.com/MiDuWQ5.png)
+# MUDApp: : La app de las mudanzas. Paso 2 Diseño y Desarrollo del backend (APIRest)
 
-## Introducción
 
-La aplicación U-KNOW está desarrollándose a buen ritmo y no vemos el momento de lanzarla al mercado. Pero antes, necesitamos que trabajéis la parte del Front. Hemos oído hablar de las aplicaciones single-page (SPA) y eso es lo que queremos. Una aplicación SPA que se conecte a la API, que ya habéis desarrollado. Buscamos una interfaz de usuario dinámica y atractiva que pueda adaptarse a cualquier dispositivo. El interfaz debe mostrar personalidad, necesitamos un logo que se identifique con la aplicación y que capte el mensaje de cooperación que es fundamental en esta aplicación. Si también fuera progresiva (PWA) sería la guinda sobre el pastel.
-
-## Requerimientos UI
-
-A los requerimientos que se lanzaron para la parte de back-end, listados más abajo, habría que añadir algunos requerimientos de navegación:
-
-<details>
-  <summary><b>Hero</b></summary>
-
-  - La aplicación comienza con un **hero** que ocupa todo el view-port. La imagen del hero debe tener una cierta animación antes de mostrar un enlace a "ver contenidos" que dirigirá a la página principal o home.
-</details>
-<details>
-  <summary><b>Home</b></summary>
-
-  - La **home**, debe constar de:
-    - Una **barra de navegación** superior que sin estado mostrará:
-      - Un logo con el nombre de la app
-      - Un avatar
-
-      - Comportamiento de la barra de navegación:
-        - Al clicar el logo se navega a la home
-        - Al clicar el avatar:
-          - si no hay usuario logado navega a la página de login/register
-          - si el usuario está logado debe mostrar un menú con los elementos: profile, contents, logout. El avatar, así mismo debe mostrar el nombre del usuario cuando está logado.
-      - Aspecto:
-        - En modo móvil, la barra de navegación será de tipo bottom navigation, con todas las opciones del menú:
-          ![bottom-navigation](https://lh3.googleusercontent.com/14jax4TqtGJ1R7uteNETMHtrB4_83FOVLCsLW3VxWh17Mle2RiCPiUwPgN0hEXqkCr-281geh88fDMuEZyGVTyhZ_j8hO9RHElEa=w1064-v0)
-        - En modo laptop la barra será muy minimalista y deberá desaparecer con el scroll-down del contenido y aparecer con el scroll-up.
-    - Una **caja de búsqueda de contenidos** que filtrará en tiempo real la lista desplegada
-    - Una **lista de contenidos** que mostrará una "card" con la información minima del contenido. La lista tendrá scroll infinito y debe cargarse de forma diferida. Cada tarjeta mostrará dos botones: "Ver más" y Comprar.
-      - "Ver más": muestra un modal con una ampliación de la información y un enlace a ver la información completa con comentarios (opcional)
-      - Comprar: chequea si hay saldo y muestra pantalla de confirmación de compra.
-
-  </details>
 ## Introducción
 
 Una start-up de nueva creación ha solicitado una aplicación para dinamizar el mundo de las mudanzas y del transporte de paquetería en general.
 
 La aplicación tiene cierta semejanza con la aplicación de UBER y, su objetivo principal es poner en contacto a personas con necesidades de transporte de bienes con transportistas que tengan un vehículo de las características adecuadas a esas necesidades.
 
-Necesitamos abordar la parte de desarrollo del interfaz de cliente, para ello queremos una aplicación SPA (single-page application) conectada a la API que habéis desarrollado. La interfaz debe ser dinámica y atractiva y debe poder adaptarse a cualquier dispositivo. Queremos un logo que identifique la aplicación y el concepto de empresa que queremos montar.
+Necesitamos abordar la parte de desarrollo del interfaz de cliente, para ello queremos una aplicación SPA (single-page application) conectada a la API que habéis desarrollado. La interfaz debe ser dinámica y atractiva y debe poder adaptarse a cualquier dispositivo. Queremos un logo que identifique la aplicación con el concepto de empresa que queremos montar.
 
 ## Requerimientos UI
 
@@ -60,13 +26,13 @@ A los requerimientos que se lanzaron para la parte de back-end, listados más ab
         - Al clicar el logo se navega a la home
         - Al clicar el avatar:
           - si no hay usuario logado navega a la página de login/register
-          - si el usuario está logado debe mostrar un menú con los elementos: profile, contents, logout. El avatar, así mismo debe mostrar el nombre del usuario cuando está logado.
+          - si el usuario está logado debe mostrar un menú con los elementos: profile, my transports, logout. El avatar, así mismo debe mostrar el nombre del usuario cuando está logado.
       - Aspecto:
         - En modo móvil, la barra de navegación será de tipo bottom navigation, con todas las opciones del menú:
           ![bottom-navigation](https://lh3.googleusercontent.com/14jax4TqtGJ1R7uteNETMHtrB4_83FOVLCsLW3VxWh17Mle2RiCPiUwPgN0hEXqkCr-281geh88fDMuEZyGVTyhZ_j8hO9RHElEa=w1064-v0)
         - En modo laptop la barra será muy minimalista y deberá desaparecer con el scroll-down del contenido y aparecer con el scroll-up.
-    - Una **caja de búsqueda de contenidos** que filtrará en tiempo real la lista desplegada, en función de los parámetros de la fich
-    - Una **lista de contenidos** que mostrará una "card" con la información minima del contenido. La lista tendrá scroll infinito y debe cargarse de forma diferida. Cada tarjeta mostrará dos botones: "Ver más" y Contratar.
+    - Una **caja de búsqueda de transportistas** que filtrará en tiempo real la lista desplegada.
+    - Una **lista de transportistas** que mostrará una "card" con la información minima del transportista. La lista tendrá scroll infinito y debe cargarse de forma diferida. Cada tarjeta mostrará dos botones: "Ver más" y Contratar.
       - "Ver más": muestra un modal con una ampliación de la información.
       - Contratar: Comprueba si está logado el cliente y si, es así aparecerá un cuadro de contratado.
 </details>
